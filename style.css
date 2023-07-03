@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Content {
+    background: linear-gradient(to right, rgb(175, 247, 199), #eff0c0, rgb(231, 241, 183), #fcb064, #a5fac1, #faf7f9)
+}
+
+nav {
+    height: 5rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #a1e7f8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 5px red;
+    position: fixed;
+    width: 98%;
+}
+
+#Logo {
+    width: 40%;
+    color: #24262b;
+    margin-left: 50px;
+}
+
+#Logo h1 {
+    text-shadow: 2px 2px 2px rgb(121, 240, 10);
+}
+
+.Menu {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Menu a {
+    text-decoration: none;
+    color: #24262b;
+    font-weight: bold;
+    position: relative;
+}
+
+.Menu a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 3px;
+    background-color: rgb(8, 156, 18);
+    transition: all 0.5s linear;
+}
+
+.Menu a:hover:before {
+    width: 100%;
+    background-color: rgb(231, 47, 65);
+}
+
+
+/* slider */
+
+.slider-body {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 20rem;
+    background: linear-gradient(to right, rgb(248, 235, 235), #61fdf0, rgb(172, 237, 248), #a1e7f8, #e9fd32, #faf7f9);
+}
+
+.sh {
+    font-size: 2rem;
+    line-height: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+    text-shadow: rgb(247, 0, 255);
+    text-align: center;
+    padding: 1rem;
+}
+
+#Image-Slider {
+    /* margin-top:0.5rem; */
+    /* margin-bottom: 40rem; */
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(Bengal.png);
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px rgb(220, 243, 119);
+    animation: slider 10s infinite linear;
+}
+
+#Des-Slider {
+    text-align: left;
+    line-height: 2rem;
+}
+
+@keyframes slider {
+    2% {
+        background-image: url(Bengal.png);
+    }
+    35% {
+        background-image: url(Bengal.png);
+    }
+    75% {
+        background-image: url(Bengal.png);
+    }
+    90% {
+        background-image: url(Bengal.png);
+    }
+}
+
+
+/* cards */
+
+.CardS {
+    margin-top: 28rem;
+    background: linear-gradient(to right, rgb(226, 92, 197), #61fdf0, rgb(172, 237, 248), #a1e7f8, #e9fd32, #faf7f9)
+}
+
+#Card {
+    width: 20rem;
+    height: 34rem;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 2rem;
+    margin: 2.2rem;
+    display: inline-block;
+    background-color: rgba(49, 23, 35, 0.9);
+}
+
+#Image img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#Title {
+    text-align: center;
+    padding: 1rem;
+}
+
+#Title p {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(248, 242, 242);
+}
+
+#Des {
+    padding: 3px;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#Des p {
+    font-weight: 100;
+    color: #bbbbbb;
+}
+
+button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* grid */
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+
+/* About */
+
+.About {
+    margin-top: 0rem;
+    padding: 2rem;
+    background: linear-gradient(to right, rgb(75, 74, 74), #fab0f6, rgb(172, 237, 248), #a1e7f8, #e9fd32, #ecaad6);
+}
+
+#Cd-abt {
+    width: 90%;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 2rem;
+    margin: 2.2rem;
+    display: inline-block;
+    background-color: rgba(243, 233, 235, 0.9);
+}
+
+#Img-abt img {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 50%;
+    float: left;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#loc-abt {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(41, 8, 8);
+}
+
+#Ti-abt {
+    text-align: left;
+    padding: 1rem;
+}
+
+#Ti-abt p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(41, 8, 8);
+}
+
+#Des-abt {
+    padding: 3px;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#Des-abt p {
+    text-align: left;
+    font-weight: 100;
+    color: #474343;
+}
+
+button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    float: inline-end;
+    background-color: white;
+    border: 0.2em solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media(max-width: 574px) {
+    #Image-Slider {
+        /* margin-top:0.5rem; */
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        margin: 5px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(Bengal.png);
+        background-size: 100% 100%;
+        box-shadow: 1px 2px 10px 5px rgb(243, 119, 119);
+        animation: slider 9s infinite linear;
+    }
+    .sh {
+        font-size: 1.5rem;
+        line-height: 1rem;
+        letter-spacing: 0.1rem;
+        color: rgba(236, 222, 222, 0.9);
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
